@@ -1,0 +1,474 @@
+@-webkit-keyframes float {
+    from { background-position: 0 95%; }
+    50% { background-position: 0 105%; }
+    to { background-position: 0 95%; }
+}
+@-webkit-keyframes shadow {
+    from { -webkit-transform: scale(0.85,0.85) }
+    50% { -webkit-transform: none; }
+    to { -webkit-transform: scale(0.85,0.85) }
+}
+@-moz-keyframes float {
+    from { background-position: 0 95%; }
+    50% { background-position: 0 105%; }
+    to { background-position: 0 95%; }
+}
+@-moz-keyframes shadow {
+    from { -moz-transform: scale(0.85,0.85) }
+    50% { -moz-transform: none; }
+    to { -moz-transform: scale(0.85,0.85) }
+}
+@keyframes float {
+    from { background-position: 0 95%; }
+    50% { background-position: 0 105%; }
+    to { background-position: 0 95%; }
+}
+@keyframes shadow {
+    from { transform: scale(0.85,0.85) }
+    50% { transform: none; }
+    to { transform: scale(0.85,0.85) }
+}
+
+.big-picture {
+    background: #000a14; /* Old browsers */
+    background: -moz-linear-gradient(left,  #000a14 0%, #00283a 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#000a14), color-stop(100%,#00283a)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  #000a14 0%,#00283a 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  #000a14 0%,#00283a 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  #000a14 0%,#00283a 100%); /* IE10+ */
+    background: linear-gradient(to right,  #000a14 0%,#00283a 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000a14', endColorstr='#00283a',GradientType=1 ); /* IE6-9 */
+    color: #fff;
+}
+div[role=main] .big-picture .busta {
+    padding: 2em 30px 2em 360px;
+    background: url('/static/base/img/home/big-picture.png') 0 100% no-repeat;
+    position: relative;
+    -webkit-animation: float 3s infinite;
+    -moz-animation: float 3s infinite;
+    animation: float 3s infinite;
+}
+.closed div[role=main] .big-picture .busta {
+    padding: 2em 30px 2em 360px;
+    background: url('../images/winning-cup.png') 40px 2em no-repeat;
+    position: relative;
+    -webkit-animation: none;
+    -moz-animation: none;
+    animation: none;
+}
+.big-picture .busta > i {
+    content: "";
+    width: 305px;
+    height: 115px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('/static/base/img/home/big-picture-shadow.png') 50% 100% no-repeat;
+    background-size: cover;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-animation: shadow 3s infinite;
+    -moz-animation: shadow 3s infinite;
+    animation: shadow 3s infinite;
+}
+.big-picture .shout {
+    margin: 0.6em 0;
+}
+.build {
+    padding: 1em;
+}
+.build ul {
+    overflow: hidden;
+    padding-left: 0;
+    margin-left: -2%;
+    list-style-type: none;
+}
+.build li {
+    float: left;
+    width: 23%;
+    margin-left: 2%;
+    padding-top: 150px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+.build li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 140px;
+    background: #ebebeb 50% 50% no-repeat;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 1px inset rgba(255,255,255,0.5);
+    display: block;
+}
+.build li.make:before {
+    background-image: url('/static/base/img/home/panel-make.png');
+}
+.build li.invent:before {
+    background-image: url('/static/base/img/home/panel-invent.png');
+}
+.build li.win:before {
+    background-image: url('/static/base/img/home/panel-win.png');
+}
+.build li.market:before {
+    background-image: url('/static/base/img/home/panel-market.png');
+}
+.winners li {
+    padding: 30px;
+    margin: 0;
+    background: #e6e6e6;
+    border: 1px solid #c4c4c4;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    width: 31%;
+    margin-right: 2%;
+    min-height: 540px;
+}
+.entries li:nth-child(3n+1) {
+    clear: none;
+}
+.winners li:before {
+    content: none;
+}
+.winners li h2 {
+    margin-top: 0.2em;
+}
+.winners .champ {
+    width: 97%;
+    position: relative;
+    margin: 0 0 1em 0;
+    min-height: 20px;
+}
+.winners li b {
+    color: #000;
+}
+.winners li a {
+    position: relative;
+    display: block;
+}
+.winners li a .hide {
+    position: absolute;
+    left: -9999em;
+    height: 1px;
+    overflow: hidden;
+    display: block;
+}
+.winners .champ a {
+    position: static;
+}
+.winners .frame {
+    max-height: 120px;
+}
+.champ .frame {
+    width: 300px;
+    max-height: 200px;
+    margin-right: 20px;
+}
+.winners .badge {
+    left: -10px;
+    top: -10px;
+    background: transparent;
+    padding: 0;
+    width: auto;
+}
+.winners .champ .badge {
+    top: 20px;
+    left: 25px;
+}
+.gameon_partners .col {
+    float: left;
+    width: 50%;
+}
+.gameon_partners ul {
+    margin: 1em 0 0;
+}
+.partners li {
+    padding: 0 1%;
+    width: 35%;
+    margin-left: 0;
+    margin-bottom: 1em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.partners li:before {
+    content: none;
+}
+.partners img {
+    width: 100%;
+    height: auto;
+}
+.with li {
+    width: 25%;
+    
+}
+.with .lg {
+    width: 35%;
+}
+.with .cl {
+    clear: left;
+}
+.participate {
+    background: #37d09e;
+    font-size: 13px;
+    position: relative;
+}
+.participate::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.33)), to(rgba(0,0,0,0)));
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0.33), rgba(0,0,0,0));
+    background: -moz-linear-gradient(top, rgba(0,0,0,0.33), rgba(0,0,0,0));
+    background: linear-gradient(top, rgba(0,0,0,0.33), rgba(0,0,0,0));
+}
+.participate .busta {
+    padding: 100px 5em 0;
+    background: url('/static/base/img/home/participate.png') 100% 0 no-repeat;
+}
+.participate .exclaim {
+    color: #37d09e;
+    margin-top: 0;
+}
+.participate .wrapper {
+    display: table;
+    border-spacing: 20px;
+    margin-bottom: 12em;
+    height: 100%;
+    padding: 0 70px;
+}
+.participate article {
+    width: 50%;
+
+    display: table-cell;
+    position: relative;
+    height: 100%;
+}
+.participate article ul {
+    margin: 0;
+}
+.participate article p {
+    margin: 1em 0 0;
+}
+.participate article li {
+    margin: 1em 0 0;
+    padding: 0 0 0 34px;
+}
+.participate article .inner {
+    display: table;
+    height: 100%;
+    border-spacing: 0;
+    position: relative;
+    padding: 40px;
+    background: #00283A;
+    border-radius: 16px 16px 0 0;
+    color: #FFF;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.participate .vevent {
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+    padding-left: 0;
+}
+.participate .vevent h4 {
+    margin: 0.5em 0 0;
+}
+.participate .vevent p {
+    margin: 0;
+}
+.participate article footer {
+    padding: 44px 40px 30px 40px;
+    border-radius: 0 0 16px 16px;
+    background: #000A14;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 3.5em;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.participate article footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15px;
+
+    background:
+        -webkit-linear-gradient(-45deg,  transparent 75%, #000A14 75%) 0 0,
+        -webkit-linear-gradient(-135deg, transparent 75%, #000A14 75%) 0 0,
+        -webkit-linear-gradient(-45deg,  transparent 75%, #000A14 75%) 7px -15px,
+        -webkit-linear-gradient(-135deg, transparent 75%, #000A14 75%) 7px -15px;
+    background:
+        -moz-linear-gradient(-45deg,  transparent 75%, #000A14 75%) 0 0,
+        -moz-linear-gradient(-135deg, transparent 75%, #000A14 75%) 0 0,
+        -moz-linear-gradient(-45deg,  transparent 75%, #000A14 75%) 7px -15px,
+        -moz-linear-gradient(-135deg, transparent 75%, #000A14 75%) 7px -15px;
+    /* FF16+ ditched the vendor-prefix, the spec changed - we the values are different */
+    background:
+        linear-gradient(135deg,  transparent 75%, #000A14 75%) 0 0,
+        linear-gradient(225deg, transparent 75%, #000A14 75%) 0 0,
+        linear-gradient(135deg,  transparent 75%, #000A14 75%) 7px -15px,
+        linear-gradient(225deg, transparent 75%, #000A14 75%) 7px -15px;
+
+    background-color: #00283A;
+    background-position: 50% 100%;
+    background-size: 25px 30px;
+}
+.participate .submit_now footer p {
+    padding-left: 60px;
+    background-image: url('/static/base/img/css/clock.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0;
+    min-height: 46px;
+}
+/* so that the bottom section merges with the footer */
+#home div[role=main] {
+    padding-bottom: 0;
+}
+#home .site-footer {
+    margin-top: 0;
+}
+
+@media all and (max-width: 800px) {
+    div[role=main] .big-picture .busta,
+    .closed div[role=main] .big-picture .busta {
+        background-image: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
+        padding: 2em 30px;
+    }
+    .big-picture .busta > i {
+        display: none;
+        -webkit-animation: none;
+        -moz-animation: none;
+        animation: none;
+    }
+    .participate .busta {
+        padding: 2em 0 0;
+        background: none;
+    }
+}
+
+@media all and (max-width: 640px) {
+    .build {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .build ul {
+        width: auto;
+        margin: 0 auto;
+        position: relative;
+        left: -10px;
+    }
+    .build li {
+        margin-bottom: 20px;
+        width: auto;
+        float: none;
+        padding: 5px 5px 5px 110px;
+        min-height: 100px;
+    }
+    .build li:before {
+        height: 100px;
+        width: 100px;
+    }
+    .gameon_partners .col {
+        float: none;
+        margin-bottom: 1em;
+        width: 70%;
+    }
+    .gameon_partners .partners {
+        margin-left: 0;
+        left: 0;
+    }
+    .winners li {
+        padding: 10px;
+        margin-right: 0;
+        min-height: 30px;
+    }
+    .winners .frame {
+        max-height: 200px;
+    }
+    .winners .champ {
+        width: 100%;
+    }
+    .winners .champ .frame {
+        width: 100%;
+        max-height: 300px;
+    }
+    .winners .badge {
+        left: -5px;
+        top: 10px;
+    }
+    .winners .champ .badge {
+        top: 0;
+        left: 5px;
+    }
+    .partners li {
+        padding-left: 0;
+        height: auto;
+        min-height: 0;
+        width: 50%;
+        float: left;
+        margin-left: 0;
+    }
+    .participate .busta {
+        padding: 1.5em 1.5em 0;
+    }
+    .participate .wrapper {
+        display: block;
+        margin-bottom: 0;
+        padding: 0;
+    }
+    .participate article {
+        width: auto;
+        margin: 0 0 1.5em;
+        display: block;
+    }
+    .participate article .inner {
+        display: block;
+        border-radius: 16px;
+    }
+    .participate article footer {
+        position: relative;
+        margin: 40px -40px -40px;
+        top: 0;
+        width: auto;
+        min-height: 0;
+    }
+}
+@media all and (max-width: 460px) {
+    .partners li {
+        min-height: 0;
+        width: auto;
+        float: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .gameon_partners .with {
+        width: 100%;
+    }
+    .with li,
+    .with .lg {
+        width: 50%;
+        float: left;
+    }
+}
